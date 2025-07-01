@@ -23,7 +23,7 @@
 #include <intrin.h>
 #endif
 
-#include "../include/argon2.h"
+#include "argon2.h"
 
 static uint64_t rdtsc(void) {
 #ifdef _WIN32

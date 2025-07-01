@@ -18,7 +18,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../include/argon2.h"
+#include "argon2.h"
 #include "core.h"
 #ifdef __MINGW32__
 #include <inttypes.h>
