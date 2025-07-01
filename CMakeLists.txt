@@ -47,7 +47,7 @@ add_executable(testcase
 )
 
 # Include directories for headers
-target_include_directories(testcase PRIVATE include src)
+target_include_directories(testcase PRIVATE include)
 
 # Match the compile flags used in your clang command
 target_compile_options(testcase PRIVATE
