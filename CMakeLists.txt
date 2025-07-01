@@ -3,15 +3,7 @@ project(argon2 C)
 
 set(CMAKE_C_STANDARD 23)
 
-target_compile_options(argon2 PRIVATE
-        -O3
-        -Wall
-        -Wextra
-        -Wno-type-limits
-        -march=native
-        -g
-        -pthread
-)
+
 
 set(ARGON_2_SOURCES
         src/argon2.c
@@ -24,3 +16,16 @@ set(ARGON_2_SOURCES
 )
 
 add_executable(argon2 ${ARGON_2_SOURCES})
+
+target_compile_options(argon2 PRIVATE
+        -O3
+        -Wall
+        -Wextra
+        -Wno-type-limits
+        -march=native
+        -g
+        -pthread
+)
+
+find_package(Threads REQUIRED)
+target_link_libraries(argon2 PRIVATE Threads::Threads)
