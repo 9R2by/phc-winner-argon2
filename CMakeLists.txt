@@ -43,10 +43,8 @@ add_executable(testcase
         src/test.c
 )
 
-# Include directories for headers
 target_include_directories(testcase PRIVATE include)
 
-# Match the compile flags used in your clang command
 target_compile_options(testcase PRIVATE
         -std=c17
         -O3
@@ -57,11 +55,9 @@ target_compile_options(testcase PRIVATE
         -pthread
 )
 
-# Link with threads
 find_package(Threads REQUIRED)
 target_link_libraries(testcase PRIVATE Threads::Threads)
 
-# Optional: add a 'make test' equivalent
 add_custom_target(test
         COMMAND testcase
         DEPENDS testcase
