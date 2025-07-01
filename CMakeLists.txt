@@ -1,8 +1,26 @@
 cmake_minimum_required(VERSION 3.31)
-project(phc-winner-argon2 C)
+project(argon2 C)
 
 set(CMAKE_C_STANDARD 23)
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -Wall -g -Iinclude -Isrc")
+target_compile_options(argon2 PRIVATE
+        -O3
+        -Wall
+        -Wextra
+        -Wno-type-limits
+        -march=native
+        -g
+        -pthread
+)
 
-add_executable(cmake_test main.c)
+set(ARGON_2_SOURCES
+        src/argon2.c
+        src/core.c
+        src/blake2/blake2b.c
+        src/thread.c
+        src/encoding.c
+        src/opt.c
+        src/run.c
+)
+
+add_executable(argon2 ${ARGON_2_SOURCES})
