@@ -17,12 +17,10 @@
 
 #include <stdint.h>
 #include <string.h>
-#include <stdlib.h>
 
 #include "argon2.h"
 #include "core.h"
 
-#include "blake2/blake2.h"
 #include "blake2/blamka-round-opt.h"
 
 /*
