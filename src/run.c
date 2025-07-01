@@ -26,6 +26,7 @@
 #include "argon2.h"
 #include "core.h"
 
+//#define T_COST_DEF 3
 #define T_COST_DEF 2
 //#define LOG_M_COST_DEF 12 /* 2^12 = 4 MiB */
 #define LOG_M_COST_DEF 15 /* 2^15 = 32 MiB */
@@ -44,9 +45,9 @@ static void usage(const char *cmd) {
     printf("\tPassword is read from stdin\n");
     printf("Parameters:\n");
     printf("\tsalt\t\tThe salt to use, at least 8 characters\n");
-    printf("\t-i\t\tUse Argon2i (this is the default)\n");
+    printf("\t-id\t\tUse Argon2id (this is the default)\n");
+    printf("\t-i\t\tUse Argon2i instead of Argon2id\n");
     printf("\t-d\t\tUse Argon2d instead of Argon2i\n");
-    printf("\t-id\t\tUse Argon2id instead of Argon2i\n");
     printf("\t-t N\t\tSets the number of iterations to N (default = %d)\n",
            T_COST_DEF);
     printf("\t-m N\t\tSets the memory usage of 2^N KiB (default %d)\n",
