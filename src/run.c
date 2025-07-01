@@ -173,7 +173,8 @@ int main(int argc, char *argv[]) {
     uint32_t t_cost = T_COST_DEF;
     uint32_t lanes = LANES_DEF;
     uint32_t threads = THREADS_DEF;
-    argon2_type type = Argon2_i; /* Argon2i is the default type */
+//    argon2_type type = Argon2_i; /* Argon2i is the default type */
+    argon2_type type = Argon2_id; /* Argon2id is the default type */
     int types_specified = 0;
     int m_cost_specified = 0;
     int encoded_only = 0;
