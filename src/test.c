@@ -20,7 +20,7 @@
 #include <string.h>
 #include <assert.h>
 
-#include "argon2.h"
+#include "../include/argon2.h"
 
 #define OUT_LEN 32
 #define ENCODED_LEN 108

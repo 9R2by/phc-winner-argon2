@@ -23,7 +23,7 @@
 #include <string.h>
 #include <time.h>
 
-#include "argon2.h"
+#include "../include/argon2.h"
 #include "core.h"
 
 //#define T_COST_DEF 3
