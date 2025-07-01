@@ -4,7 +4,6 @@ project(argon2 C)
 set(CMAKE_C_STANDARD 23)
 
 
-
 set(ARGON_2_SOURCES
         src/argon2.c
         src/core.c
@@ -14,8 +13,6 @@ set(ARGON_2_SOURCES
         src/opt.c
         src/run.c
 )
-
-
 
 
 add_executable(argon2 ${ARGON_2_SOURCES} ${HEADERS})
