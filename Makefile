@@ -38,7 +38,7 @@ SRC_GENKAT = src/genkat.c
 OBJ = $(SRC:.c=.o)
 
 # CFLAGS += -std=c89 -O3 -Wall -g -Iinclude -Isrc
-CFLAGS += -E -std=c17 -O3 -Wall -g -Iinclude -Isrc
+CFLAGS += -std=c17 -O3 -Wall -g -Iinclude -Isrc
 
 ifeq ($(NO_THREADS), 1)
 CFLAGS += -DARGON2_NO_THREADS
