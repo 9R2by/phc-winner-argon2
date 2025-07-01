@@ -15,11 +15,6 @@ set(ARGON_2_SOURCES
         src/run.c
 )
 
-set(HEADERS
-        include/argon2.h
-)
-
-
 
 add_executable(argon2 ${ARGON_2_SOURCES} ${HEADERS})
 
