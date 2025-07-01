@@ -13,10 +13,15 @@ set(ARGON_2_SOURCES
         src/encoding.c
         src/opt.c
         src/run.c
+)
+
+set(HEADERS
         include/argon2.h
 )
 
-add_executable(argon2 ${ARGON_2_SOURCES})
+
+
+add_executable(argon2 ${ARGON_2_SOURCES} ${HEADERS})
 
 target_compile_options(argon2 PRIVATE
         -O3
