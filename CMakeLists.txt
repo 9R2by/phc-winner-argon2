@@ -13,6 +13,7 @@ set(ARGON_2_SOURCES
         src/encoding.c
         src/opt.c
         src/run.c
+        include/argon2.h
 )
 
 add_executable(argon2 ${ARGON_2_SOURCES})
